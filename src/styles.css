@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container {
+    background-color: burlywood;
+}
+
+.border {
+    border: brown;
+    border-width: 2px;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.m-2 {
+    margin-top: 0.50em;
+    margin-bottom: 0.50em;
+}
