@@ -8,15 +8,17 @@ import { ServerComponent } from './Server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { UsernameInputComponent } from './usernameInput/usernameInput.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     ServerComponent,
     ServersComponent,
     WarningAlertComponent,
-    SuccessAlertComponent
-  ],
+    SuccessAlertComponent,
+      UsernameInputComponent
+   ],
   imports: [
     BrowserModule,
     FormsModule,
