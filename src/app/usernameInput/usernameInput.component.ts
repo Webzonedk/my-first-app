@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsernameInputComponent implements OnInit {
   userName = '';
-  constructor() { }
+  allowClick = false;
+
+  constructor() {
+// checkInput(){}
+
+
+  }
 
   ngOnInit() {
+  }
+
+  onClickReset(){
+
   }
 
 }
