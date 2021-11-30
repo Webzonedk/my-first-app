@@ -10,7 +10,6 @@ export class UsernameInputComponent implements OnInit {
   allowClick = false;
 
   constructor() {
-// checkInput(){}
 
 
   }
@@ -18,8 +17,15 @@ export class UsernameInputComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickReset(){
+  onClickReset() {
+    this.userName = '';
+  }
 
+  isEmpty(event: any) {
+    this.userName = (<HTMLInputElement>event.target).value; //Fetching data from input field to be used in this method
+    if (this.userName != '') {
+      this.allowClick = true;
+    }
   }
 
 }

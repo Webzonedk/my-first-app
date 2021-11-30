@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus = 'No server was created!';
-  serverName= 'Testserver';
+  serverName = 'Testserver';
 
   constructor() {
     setTimeout(() => {
@@ -26,7 +26,7 @@ export class ServersComponent implements OnInit {
   }
 
   onUpdateServerName(event: any) {
-    this.serverName=(<HTMLInputElement>event.target).value;//Fetching data from input field in HTML file to be showed in the string interpolation serverName
+    this.serverName = (<HTMLInputElement>event.target).value;//Fetching data from input field in HTML file to be showed in the string interpolation serverName
   }
 
 }

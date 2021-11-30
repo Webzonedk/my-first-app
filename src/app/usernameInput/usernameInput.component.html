@@ -1,5 +1,5 @@
 <h3>Username Component</h3>
 <label>Username:</label>
-<input type="text" class="form-control" [(ngModel)]="userName">
+<input type="text" class="form-control" (input)="isEmpty($event)" [(ngModel)]="userName">
 <p>Your username is: {{userName}}</p>
-<button class="btn btn-primary m-2" [disabled]="!allowClick" (click)="onClickReset()"></button>
+<button class="btn btn-primary m-2" [disabled]="!allowClick" (click)="onClickReset()">Submit Username</button>
