@@ -11,14 +11,14 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { UsernameInputComponent } from './usernameInput/usernameInput.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     ServerComponent,
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-      UsernameInputComponent
-   ],
+    UsernameInputComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,

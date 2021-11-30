@@ -10,8 +10,6 @@ export class UsernameInputComponent implements OnInit {
   allowClick = false;
 
   constructor() {
-
-
   }
 
   ngOnInit() {
