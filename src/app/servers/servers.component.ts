@@ -8,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  allowNewServer = false;
-  serverCreationStatus = 'No server was created!';
+  serverID: number = 0;
+  allowNewServer: boolean = false;
+  serverCreationStatus: string = 'No server was created!';
   serverName = 'Testserver';
   serverCreated = false;
+  servers = ['Testserver', 'Testserver 2'];
+  serverIDs = [];
 
   constructor() {
     setTimeout(() => {
@@ -22,9 +25,22 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  get ServerIDValue() {
+    return this.serverID;
+  }
+
+  get ServerNameValue(){
+    return this.serverName;
+  }
+
+
   onCreateServer() {
     this.serverCreated = true;
+    this.serverName = (<HTMLInputElement>event.target).value;//Fetching data from input field in HTML file to be showed in the string interpolation serverName
+    this.servers.push(this.serverName);
+    this.serverIDs.push(this.serverID);
     this.serverCreationStatus = 'Server was createt! Name is' + this.serverName;
+    this.serverID++;
   }
 
   onUpdateServerName(event: any) {

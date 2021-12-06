@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class UsernameInputComponent implements OnInit {
   userName = '';
   allowClick = false;
+  secretPassword = 'Tuna';
+  showDetails = false;
+  clickLogs = [];
+  timeStamp = Date.now();
+
 
   constructor() {
   }
@@ -15,7 +20,10 @@ export class UsernameInputComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClickReset() {
+  sendInfo() {
+    if (this.userName != '') {
+      this.clickLogs.push(this.userName);
+    }
     this.userName = '';
   }
 
@@ -24,6 +32,10 @@ export class UsernameInputComponent implements OnInit {
     if (this.userName != '') {
       this.allowClick = true;
     }
+  }
+
+  showPassword() {
+    this.showDetails = true;
   }
 
 }
