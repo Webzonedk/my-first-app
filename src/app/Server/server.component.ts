@@ -7,8 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ServerComponent {
   @Input() serverID;
-  // serverID;
-  @Input() serverName
+  @Input() serverName;
   serverStatus: string = 'offline';
   indexNr:number;
 
@@ -20,7 +19,6 @@ export class ServerComponent {
   }
 
 getServerID(){
-  console.log(this.indexNr);
   return this.serverID;
 }
 
@@ -34,7 +32,7 @@ getServerID(){
       return this.serverStatus === 'online' ? 'green' : 'red';
     }
     else{
-      return this.serverID >5 ? 'blue' : '';
+      return this.serverID >=5 ? 'blue' : '';
 
     }
   }

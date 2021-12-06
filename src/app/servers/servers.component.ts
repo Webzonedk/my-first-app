@@ -36,7 +36,6 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
-    this.serverName = (<HTMLInputElement>event.target).value;//Fetching data from input field in HTML file to be showed in the string interpolation serverName
     this.servers.push(this.serverName);
     this.serverIDs.push(this.serverID);
     this.serverCreationStatus = 'Server was createt! Name is' + this.serverName;

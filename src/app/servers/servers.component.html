@@ -17,4 +17,4 @@
 </ng-template> -->
 <p *ngIf="serverCreated">Server was Created, Server name is {{ serverName }}</p>
 <hr>
-<app-server [serverID]="serverID" *ngFor="let server of servers let i = index" [indexNr]="i"></app-server>
+<app-server [serverID]="serverID" *ngFor="let server of servers"></app-server>

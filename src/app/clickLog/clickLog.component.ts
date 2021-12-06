@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-clickLog',
   templateUrl: './clickLog.component.html',
   styleUrls: ['./clickLog.component.css']
 })
-export class ClickLogComponent implements OnInit {
+export class ClickLogComponent {
   showSecret = false;
   log = [];
 
 
   constructor() {
-
   }
 
-  ngOnInit(): void {
-  }
+
 
   onToggleDetails() {
     this.showSecret = !this.showSecret;
-    this.log.push(this.log.length + 1);
+    // this.log.push(this.log.length + 1);  //this just shows the counter increment
+    this.log.push(new Date());
   }
 
 
